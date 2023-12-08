@@ -40,6 +40,10 @@ app.get("/div", async (req, res) => {
     return res.status(200).json({ result: parseFloat(num1) / parseFloat(num2) });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running on port: ${port}`);
+// });
+
+exports.calcServerless = (req, res) => {
+    app(req,res)
+}
